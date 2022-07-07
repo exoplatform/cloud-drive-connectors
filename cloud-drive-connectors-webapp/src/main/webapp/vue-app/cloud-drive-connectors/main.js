@@ -14,6 +14,11 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
+
+export function init() {
+  console.log('test for CloudDriveConnectors portlet');
+}
+
 // get overridden components if exists
 if (extensionRegistry) {
   const components = extensionRegistry.loadComponents('CloudDriveConnectors');
