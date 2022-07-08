@@ -31,6 +31,63 @@
       <depends>
         <module>commonVueComponents</module>
       </depends>
+      <depends>
+        <module>cloudDrive_gdrive</module>
+      </depends>
+      <depends>
+        <module>cloudDrive_onedrive</module>
+      </depends>
     </module>
   </portlet>
+
+  <!-- Javascript for Cloud Drive support of Google Drive -->
+  <module>
+    <name>cloudDrive_gdrive</name>
+    <script>
+      <path>/js/gdrive/clouddrive-gdrive.js</path>
+    </script>
+    <depends>
+      <module>jquery</module>
+    </depends>
+    <depends>
+      <module>cloudDriveUtils</module>
+    </depends>
+  </module>
+
+  <!-- Javascript for Cloud Drive support of One Drive -->
+  <module>
+    <name>cloudDriveSocketIO</name>
+    <load-group>cloudDriveOnedriveGRP</load-group>
+    <script>
+      <minify>false</minify>
+      <adapter>
+        (function() {
+        <include>/js/onedrive/socket.io.js</include>
+        return {
+        io: io
+        };
+        })();
+      </adapter>
+    </script>
+  </module>
+
+  <module>
+    <name>cloudDrive_onedrive</name>
+    <load-group>cloudDriveOnedriveGRP</load-group>
+    <script>
+      <path>/js/onedrive/clouddrive-onedrive.js</path>
+    </script>
+    <depends>
+      <module>jquery</module>
+    </depends>
+    <depends>
+      <module>cloudDriveDocuments</module>
+    </depends>
+    <depends>
+      <module>cloudDriveUtils</module>
+    </depends>
+    <depends>
+      <module>cloudDriveSocketIO</module>
+    </depends>
+  </module>
 </gatein-resources>
