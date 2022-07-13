@@ -28,6 +28,8 @@
     <!-- 3rd party libraries versions -->
     <org.exoplatform.social.version>6.4.x-marketfit-SNAPSHOT</org.exoplatform.social.version>
     <org.exoplatform.platform-ui.version>6.4.x-marketfit-SNAPSHOT</org.exoplatform.platform-ui.version>
+    <org.exoplatform.ecms.version>6.4.x-marketfit-SNAPSHOT</org.exoplatform.ecms.version>
+
     <!-- Sonar properties -->
     <sonar.organization>exoplatform</sonar.organization>
   </properties>
@@ -38,6 +40,14 @@
         <groupId>org.exoplatform.social</groupId>
         <artifactId>social</artifactId>
         <version>${org.exoplatform.social.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <!-- Import versions from platform project -->
+      <dependency>
+        <groupId>org.exoplatform.ecms</groupId>
+        <artifactId>ecms</artifactId>
+        <version>${org.exoplatform.ecms.version}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
