@@ -24,12 +24,12 @@
   <parent>
     <groupId>org.exoplatform.addons.cloud-drive-connectors</groupId>
     <artifactId>cloud-drive-connectors-services</artifactId>
-    <version>1.0.x-SNAPSHOT</version>
+    <version>1.0.x-marketfit-SNAPSHOT</version>
   </parent>
 
   <artifactId>cloud-drive-onedrive-services</artifactId>
   <packaging>jar</packaging>
-  <name>eXo PLF:: Cloud Drive :: OneDrive connector :: Services</name>
+  <name>eXo Cloud Drive Connectors - One Drive - Service</name>
   <description>eXo Cloud Drive Microsoft OneDrive connector extension configuration and services</description>
 
   <dependencies>

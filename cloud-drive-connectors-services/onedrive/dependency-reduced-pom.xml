@@ -3,11 +3,11 @@
   <parent>
     <artifactId>cloud-drive-connectors-services</artifactId>
     <groupId>org.exoplatform.addons.cloud-drive-connectors</groupId>
-    <version>1.0.x-SNAPSHOT</version>
+    <version>1.0.x-marketfit-SNAPSHOT</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
   <artifactId>cloud-drive-onedrive-services</artifactId>
-  <name>eXo PLF:: Cloud Drive :: OneDrive connector :: Services</name>
+  <name>eXo Cloud Drive Connectors - One Drive - Service</name>
   <description>eXo Cloud Drive Microsoft OneDrive connector extension configuration and services</description>
   <build>
     <plugins>
@@ -74,13 +74,13 @@
     <dependency>
       <groupId>org.exoplatform.ecms</groupId>
       <artifactId>ecms-core-services</artifactId>
-      <version>6.4.x-SNAPSHOT</version>
+      <version>6.4.x-marketfit-SNAPSHOT</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.exoplatform.ecms</groupId>
       <artifactId>ecms-core-webui-clouddrives</artifactId>
-      <version>6.4.x-SNAPSHOT</version>
+      <version>6.4.x-marketfit-SNAPSHOT</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
@@ -128,7 +128,7 @@
     <dependency>
       <groupId>org.exoplatform.ecms</groupId>
       <artifactId>ecms-core-webui-explorer</artifactId>
-      <version>6.4.x-SNAPSHOT</version>
+      <version>6.4.x-marketfit-SNAPSHOT</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
