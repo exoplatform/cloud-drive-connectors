@@ -14,10 +14,12 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
+const connectorsImages = [
+  {id: 'gdrive', path: '/cloud-drive-connectors/skin/images/Google Drive.png'},
+  {id: 'onedrive', path: '/cloud-drive-connectors/skin/images/One Drive.png'}
+];
+extensionRegistry.registerExtension('cloud-drive-connectors', 'images', connectorsImages);
 
-export function init() {
-  console.log('test for CloudDriveConnectors portlet');
-}
 
 // get overridden components if exists
 if (extensionRegistry) {
