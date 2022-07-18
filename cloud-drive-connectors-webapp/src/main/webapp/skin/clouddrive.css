@@ -69,7 +69,6 @@ img.onedriveImgFileViewer{
 
 /************************************* google drive ***********************************************/
 /* ADDING GDRIVE ICON FONT */
-/**/
 @font-face {
   font-family: 'icomoon';
   src: url('icons-font/icomoon.eot?7hmhfi');
@@ -81,9 +80,7 @@ img.onedriveImgFileViewer{
   font-style: normal;
 }
 
-/**/
 /* END GDRIVE ICON FONT */
-/**/
 .uiIconEcmsConnectGDrive:before {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon', sans-serif !important;

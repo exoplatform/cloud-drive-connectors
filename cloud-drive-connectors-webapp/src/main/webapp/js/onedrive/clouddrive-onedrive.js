@@ -3,15 +3,15 @@
   function OneDriveClient() {
 
     // TODO Deprecated
-    var drives = {};
+    const drives = {};
 
     // TODO Deprecated
     function ChangesSubscription(userId, notificationUrl) {
-      var self = this;
+      const self = this;
       this.changed = false;
       this.userId = userId;
 
-      var socket = socketIO.io(notificationUrl);
+      let socket = socketIO.io(notificationUrl);
       socket.on("notification", function(data) {
         console.log("> OneDrive notification: " + data);
         // TODO here we should immediately invoke change processing!!!
@@ -23,13 +23,8 @@
     var processChange = function (subscription, process, drive) {
 
       console.log("> OneDrive processChange");
-      var nowTime = new Date().getTime();
+      const nowTime = new Date().getTime();
 
-      // if (drive.state.expirationDateTime) {
-      //   console.log('time left for : ' + ' ' + + (drive.state.expirationDateTime - nowTime));
-      // }else{
-      //   console.log("drive.state.expirationDateTime = null");
-      // }
       if (nowTime >= drive.state.expirationDateTime) {
         renewState(process, drive);
         return;
@@ -83,10 +78,10 @@
     // TODO Deprecated
     this.onChangeOld = function(drive) {
       console.log("> OneDrive onChange");
-      var process = $.Deferred();
+      const process = $.Deferred();
       if (drive) {
         if (drive.state) {
-          var nowTime = new Date().getTime();
+          const nowTime = new Date().getTime();
           if (nowTime >= drive.state.expirationDateTime) {
             renewState(process, drive);
           } else {
@@ -100,7 +95,7 @@
             //   oneDrives.set(drive.state.creatorId, new OneDriveSubscription(drive.state.creatorId, drive.state.url));
             // }
 
-            var subscription = drives[drive.state.creatorId];
+            let subscription = drives[drive.state.creatorId];
             if (!subscription) {
               subscription = new ChangesSubscription(drive.state.creatorId, drive.state.url);
               drives[drive.state.creatorId] = subscription;
@@ -119,8 +114,8 @@
     
     // ******** New implementation of onChange() using asynchronous notifications and changes queue ********  
     
-    var socket;
-    var changesQueue = [];
+    let socket;
+    let changesQueue = [];
     
     var initListener = function(driveState, change) {
       console.log("> OneDrive initListener");
@@ -173,7 +168,7 @@
       });
     };
     
-    var closeListener = function() {
+    const closeListener = function() {
       if (socket) {
         // close the socket 
         socket.close();
@@ -183,14 +178,14 @@
     
     this.onChange = function(drive) {
       console.log("> OneDrive onChange");
-      var process = changesQueue.shift(); // remove from the queue if any
+      let process = changesQueue.shift(); // remove from the queue if any
       if (!process) {
         // Establish a new listener or wait for notifications from already established one.
         // Insert sooner for concurrent calls of onChange() and from initListener()
         changesQueue.push(process = $.Deferred());
         if (drive) {
           if (drive.state) {
-            var state;
+            let state;
             if (new Date().getTime() >= drive.state.expirationDateTime) {
               // We need renew the state to get fresher changes link in it
               state = cloudDriveDocuments.getState(drive);
@@ -224,11 +219,6 @@
         });
       } // otherwise, change was already tracked by currently established listener - return (consume) it
       return process.promise();
-    };
-
-    // TODO need it?
-    var getChange = function (drive) {
-      // must be blocking
     };
   }
 

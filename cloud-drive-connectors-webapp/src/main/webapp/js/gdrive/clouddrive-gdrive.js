@@ -32,20 +32,20 @@
 				// formats.
 				// We change it on /preview as proposed in several blogs in Internet - it's not documented
 				// stuff.
-				var sdkView = "view?usp=drivesdk";
-				var sdkViewIndex = file.link.indexOf(sdkView, file.link.length - sdkView.length);
+				const sdkView = "view?usp=drivesdk";
+				const sdkViewIndex = file.link.indexOf(sdkView, file.link.length - sdkView.length);
 				if (sdkViewIndex !== -1) {
 					file.previewLink = file.link.slice(0, sdkViewIndex) + "preview";
 				}
 			}
 		};
 
-		this.initContext = function(provider) {
+		this.initContext = function(_provider) {
 			// XXX For a case of Activity stream, we fix the UI (CSS) to let Google large icons look
 			// smaller, like native ones in eXo
 			try {
 				$("i[class*='uiIcon64x64applicationvndgoogle-'].uiCloudFileActivity").each(function() {
-					var $elem = $(this);
+					const $elem = $(this);
 					// decrease activity box size, set size to fileTypeContent
 					// (fileTypeContent>a>i.uiCloudFileActivity)
 					$elem.parent().parent().css({
