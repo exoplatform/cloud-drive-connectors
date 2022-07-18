@@ -86,7 +86,7 @@ img.onedriveImgFileViewer{
 /**/
 .uiIconEcmsConnectGDrive:before {
     /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: 'icomoon' !important;
+    font-family: 'icomoon', sans-serif !important;
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -101,7 +101,7 @@ img.onedriveImgFileViewer{
 
 .uiIconEcmsConnectDialog-gdrive:before {
     /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: 'icomoon' !important;
+    font-family: 'icomoon', sans-serif !important;
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -118,7 +118,7 @@ img.onedriveImgFileViewer{
 
 .uiIcon16x16CloudFile-gdrive:before {
     /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: 'icomoon' !important;
+    font-family: 'icomoon', sans-serif !important;
     speak: none;
     text-transform: none;
     line-height: 1;
@@ -139,7 +139,7 @@ img.onedriveImgFileViewer{
     height: 16px;
     position: absolute !important;
     /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: 'icomoon' !important;
+    font-family: 'icomoon', sans-serif !important;
     speak: none;
     text-transform: none;
     line-height: 1;
@@ -162,7 +162,7 @@ img.onedriveImgFileViewer{
     position: relative !important;
     display: inline-block;
     /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: 'icomoon' !important;
+    font-family: 'icomoon', sans-serif !important;
     speak: none;
     text-transform: none;
     line-height: 1;
@@ -184,7 +184,7 @@ img.onedriveImgFileViewer{
     height: 40px;
     position: absolute !important;
     /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: 'icomoon' !important;
+    font-family: 'icomoon', sans-serif !important;
     speak: none;
     text-transform: none;
     line-height: 1;
