@@ -1,4 +1,4 @@
-<!--
+/*
  * Copyright (C) 2022 eXo Platform SAS.
  *
  * This program is free software: you can redistribute it and/or modify
@@ -14,8 +14,38 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
--->
-<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.exoplatform.org/xml/ns/kernel_1_2.xsd http://www.exoplatform.org/xml/ns/kernel_1_2.xsd" xmlns="http://www.exoplatform.org/xml/ns/kernel_1_2.xsd">
+package org.exoplatform.services.cms.clouddrives.onedrive;
 
+import com.microsoft.graph.models.extensions.DriveItem;
 
-</configuration>
+/**
+ * DriveItem wrapper for use with HashSet.
+ */
+class HashSetCompatibleDriveItem {
+  DriveItem item;
+
+  public HashSetCompatibleDriveItem(DriveItem item) {
+    this.item = item;
+  }
+
+  public DriveItem getItem() {
+    return item;
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o)
+      return true;
+    if (o == null || getClass() != o.getClass())
+      return false;
+
+    HashSetCompatibleDriveItem that = (HashSetCompatibleDriveItem) o;
+
+    return item.id.equals(that.item.id);
+  }
+
+  @Override
+  public int hashCode() {
+    return item.id.hashCode();
+  }
+}

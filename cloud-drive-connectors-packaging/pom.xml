@@ -17,7 +17,12 @@
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
-      <artifactId>cloud-drive-connectors-services</artifactId>
+      <artifactId>cloud-drive-gdrive-services</artifactId>
+      <scope>provided</scope>
+    </dependency>
+	<dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>cloud-drive-onedrive-services</artifactId>
       <scope>provided</scope>
     </dependency>
     <dependency>
