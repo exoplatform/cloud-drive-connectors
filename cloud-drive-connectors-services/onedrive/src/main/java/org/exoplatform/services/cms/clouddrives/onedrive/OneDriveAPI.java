@@ -48,11 +48,14 @@ import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.HttpClient;
+import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicNameValuePair;
 
@@ -249,8 +252,13 @@ public class OneDriveAPI {
   /** The one drive token. */
   private final OneDriveToken        oneDriveToken;
 
+  private final int           timeout    = 5;
+  private final RequestConfig httpConfig = RequestConfig.custom()
+                                                        .setConnectTimeout(timeout * 1000)
+                                                        .setConnectionRequestTimeout(timeout * 1000)
+                                                        .setSocketTimeout(timeout * 1000).build();
   /** The httpclient. */
-  private final HttpClient           httpclient           = HttpClients.createDefault();
+  private final HttpClient    httpclient = HttpClients.custom().setDefaultRequestConfig(httpConfig).build();
 
   /** The one drive subscription. */
   private final OneDriveSubscription oneDriveSubscription = new OneDriveSubscription();
