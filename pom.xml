@@ -40,6 +40,7 @@
     <!-- One Drive API -->
     <!-- **************************************** -->
     <com.microsoft.graph.version>1.7.1</com.microsoft.graph.version>
+    <com.squareup.okhttp3.version>4.4.1</com.squareup.okhttp3.version>
     <!-- Sonar properties -->
     <sonar.organization>exoplatform</sonar.organization>
   </properties>
@@ -127,6 +128,11 @@
         <groupId>com.microsoft.graph</groupId>
         <artifactId>microsoft-graph</artifactId>
         <version>${com.microsoft.graph.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.squareup.okhttp3</groupId>
+        <artifactId>okhttp</artifactId>
+        <version>${com.squareup.okhttp3.version}</version>
       </dependency>
 
     </dependencies>
