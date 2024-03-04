@@ -4,41 +4,34 @@
         xsi:schemaLocation="http://www.exoplatform.org/xml/ns/gatein_resources_1_4 http://www.exoplatform.org/xml/ns/gatein_resources_1_4"
         xmlns="http://www.exoplatform.org/xml/ns/gatein_resources_1_4">
 
-  <portlet-skin>
-    <application-name>Cloud Drive Connectors</application-name>
-    <portlet-name>CloudDriveConnectors</portlet-name>
-    <skin-name>Enterprise</skin-name>
-    <css-path>/skin/css/cloud-drive-connectors.css</css-path>
-  </portlet-skin>
-  <portlet>
-    <name>CloudDriveConnectors</name>
-    <module>
-      <script>
-        <path>/js/cloudDriveConnectors.bundle.js</path>
-      </script>
-      <depends>
-        <module>extensionRegistry</module>
-      </depends>
-      <depends>
-        <module>eXoVueI18n</module>
-      </depends>
-      <depends>
-        <module>vue</module>
-      </depends>
-      <depends>
-        <module>vuetify</module>
-      </depends>
-      <depends>
-        <module>commonVueComponents</module>
-      </depends>
-      <depends>
-        <module>cloudDrive_gdrive</module>
-      </depends>
-      <depends>
-        <module>cloudDrive_onedrive</module>
-      </depends>
-    </module>
-  </portlet>
+  <module>
+    <name>ConnectorsCloudDriveSettingsExtension</name>
+    <load-group>cloudDriveGRP</load-group>
+    <script>
+      <path>/js/cloudDriveConnectors.bundle.js</path>
+    </script>
+    <depends>
+      <module>extensionRegistry</module>
+    </depends>
+    <depends>
+      <module>eXoVueI18n</module>
+    </depends>
+    <depends>
+      <module>vue</module>
+    </depends>
+    <depends>
+      <module>vuetify</module>
+    </depends>
+    <depends>
+      <module>commonVueComponents</module>
+    </depends>
+    <depends>
+      <module>cloudDrive_gdrive</module>
+    </depends>
+    <depends>
+      <module>cloudDrive_onedrive</module>
+    </depends>
+  </module>
 
   <!-- Javascript for Cloud Drive support of Google Drive -->
   <module>
