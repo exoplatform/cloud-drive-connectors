@@ -16,7 +16,7 @@
 #
 files: [
   {
-    "source" : "/cloud-drive-connectors-services/gdrive/src/main/resources/locale/clouddrive/CloudDrive-gdrive_en.xml",
+    "source" : "/cloud-drive-connectors-services/gdrive/src/main/resources/locale/clouddrive/CloudDrive-gdrive_en.properties",
 
     "translation" : "%original_path%/%file_name%!_%locale_with_underscore%.%file_extension%",
     "translation_replace" : {
@@ -34,7 +34,7 @@ files: [
     "escape_quotes" : 0,
   },
   {
-    "source" : "/cloud-drive-connectors-services/onedrive/src/main/resources/locale/clouddrive/CloudDrive-onedrive_en.xml",
+    "source" : "/cloud-drive-connectors-services/onedrive/src/main/resources/locale/clouddrive/CloudDrive-onedrive_en.properties",
 
     "translation" : "%original_path%/%file_name%!_%locale_with_underscore%.%file_extension%",
     "translation_replace" : {
