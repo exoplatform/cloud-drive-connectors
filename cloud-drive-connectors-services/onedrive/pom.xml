@@ -69,19 +69,19 @@
 
     <!-- eXo -->
     <dependency>
-      <groupId>org.exoplatform.kernel</groupId>
+      <groupId>io.meeds.kernel</groupId>
       <artifactId>exo.kernel.container</artifactId>
       <scope>provided</scope>
       <type>jar</type>
     </dependency>
     <dependency>
-      <groupId>org.exoplatform.kernel</groupId>
+      <groupId>io.meeds.kernel</groupId>
       <artifactId>exo.kernel.component.common</artifactId>
       <scope>provided</scope>
       <type>jar</type>
     </dependency>
     <dependency>
-      <groupId>org.exoplatform.core</groupId>
+      <groupId>io.meeds.core</groupId>
       <artifactId>exo.core.component.organization.api</artifactId>
       <scope>provided</scope>
       <type>jar</type>
@@ -105,7 +105,7 @@
       <type>jar</type>
     </dependency>
     <dependency>
-      <groupId>org.exoplatform.ws</groupId>
+      <groupId>io.meeds.ws</groupId>
       <artifactId>exo.ws.commons</artifactId>
       <scope>provided</scope>
       <type>jar</type>
