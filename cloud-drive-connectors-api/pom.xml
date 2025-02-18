@@ -5,15 +5,15 @@
     <artifactId>cloud-drive-connectors-parent</artifactId>
     <version>7.0.x-meeds-qaui-SNAPSHOT</version>
   </parent>
-  <artifactId>cloud-drive-connectors-api</artifactId>
-  <name>eXo Cloud Drive Connectors - API</name>
+  <artifactId>cloud-drive-connectors-services</artifactId>
+  <name>eXo Cloud Drive Connectors - Services</name>
   <properties>
     <exo.test.coverage.ratio>0</exo.test.coverage.ratio>
   </properties>
   <dependencies>
     <dependency>
-      <groupId>io.meeds.ws</groupId>
-      <artifactId>exo.ws.rest.core</artifactId>
+      <groupId>org.exoplatform.ecms</groupId>
+      <artifactId>ecms-core-services</artifactId>
       <scope>provided</scope>
     </dependency>
     <dependency>
@@ -23,7 +23,7 @@
     </dependency>
   </dependencies>
   <build>
-    <finalName>cloud-drive-connectors-api</finalName>
+    <finalName>cloud-drive-connectors-services</finalName>
     <plugins>
       <plugin>
         <groupId>org.projectlombok</groupId>

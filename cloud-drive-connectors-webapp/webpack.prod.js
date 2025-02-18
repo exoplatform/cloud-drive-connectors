@@ -34,6 +34,8 @@ const config = {
   ],
   entry: {
     cloudDriveConnectors: './src/main/webapp/vue-app/cloud-drive-connectors/main.js',
+    cloudStorage: './src/main/webapp/vue-app/cloudStorage/main.js',
+    cloudDriveSettings: './src/main/webapp/vue-app/cloudDriveSettings/main.js',
   },
   output: {
     path: path.join(__dirname, 'target/cloud-drive-connectors/'),
