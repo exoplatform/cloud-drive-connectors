@@ -62,7 +62,7 @@
     </dependency>
     <dependency>
       <groupId>org.exoplatform.ecms</groupId>
-      <artifactId>ecms-core-webui-clouddrives</artifactId>
+      <artifactId>ecms-core-viewer</artifactId>
       <scope>provided</scope>
       <type>jar</type>
     </dependency>
@@ -107,12 +107,6 @@
     <dependency>
       <groupId>io.meeds.ws</groupId>
       <artifactId>exo.ws.commons</artifactId>
-      <scope>provided</scope>
-      <type>jar</type>
-    </dependency>
-    <dependency>
-      <groupId>org.exoplatform.ecms</groupId>
-      <artifactId>ecms-core-webui-explorer</artifactId>
       <scope>provided</scope>
       <type>jar</type>
     </dependency>
