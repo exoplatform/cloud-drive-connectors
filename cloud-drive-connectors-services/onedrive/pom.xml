@@ -24,7 +24,7 @@
   <parent>
     <groupId>org.exoplatform.addons.cloud-drive-connectors</groupId>
     <artifactId>cloud-drive-connectors-services</artifactId>
-    <version>7.3.x-SNAPSHOT</version>
+    <version>7.3.x-devx-SNAPSHOT</version>
   </parent>
 
   <artifactId>cloud-drive-onedrive-services</artifactId>
